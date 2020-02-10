@@ -1,32 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Изменение размера карты</title>
-        <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
-    </head>
-    <body>
-        <input id="changeSize" type="button" value="Изменить размер" />
-        <div id="map" style="width: 100%; height: 200px;"></div>
-        <script>
-            var changeSizeButton = document.getElementById('changeSize');
+<body>
 
-            DG.then(function() {
-                var map,
-                    enabled = false;
+<h1>My First JavaScript</h1>
 
-                map = DG.map('map', {
-                    center: [54.98, 82.89],
-                    zoom: 15,
-                    animate: true
-                });
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
 
-                changeSizeButton.onclick = function() {
-                    var mapDiv = document.getElementById('map');
-                    mapDiv.style.height = (enabled ? '200' : '400') + 'px';
-                    // обновление карты
-                    map.invalidateSize();
-                }
-            });
-        </script>
-    </body>
-</html>
+<p id="demo"></p>
+
+</body>
+</html> 
